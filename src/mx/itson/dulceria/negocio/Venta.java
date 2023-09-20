@@ -98,8 +98,14 @@ public class Venta {
         this.impuesto = impuesto;
     }
 
+    public double iva(){
+        
+        iva = subTotal*impuesto;
+        return iva;
+    }
+    
     public double getTotal() {
-        total = subTotal*(1+impuesto);
+        total = subTotal+(subTotal*impuesto);
         return total;
     }
 
@@ -111,21 +117,16 @@ public class Venta {
         this.producto = producto;
     }
 
-    public double iva(){
-        iva = subTotal*impuesto;
-        return iva;
-    }
+    
     
     public void ticket(){
-        System.out.println("\t\t"+empresa.getNombre());
+        System.out.println("\t\t\t"+empresa.getNombre());
         System.out.println("");
         System.out.println(empresa.getDomicilio());
         System.out.println("Telefono: "+empresa.getTelefono());
         System.out.println(empresa.getCorreoElectronico());
         System.out.println(empresa.getPaginaWeb());
         System.out.println(empresa.getRfc());
-        System.out.println("");
-        System.out.println("Fecha: "+fechaHora);
         System.out.println("");
         System.out.println("-----------------------------------------------------");
         System.out.println("Cliente: "+cliente.getNombre());
@@ -134,6 +135,13 @@ public class Venta {
         System.out.println("Correo: "+cliente.getCorreoElectronico());
         System.out.println("RFC: "+cliente.getRfc());
         System.out.println("");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("\t\tFactura simplificada");
+        System.out.println("\t\t\tCaja: "+caja.getIdCaja());
+        System.out.println("Fecha: "+fechaHora);
+        System.out.println("Cajero: "+empleado.getNombre());
+        System.out.println("");
+        System.out.println("-----------------------------------------------------");
         System.out.println("Articulo\tPrecio\tCantidad\tTotal");
         System.out.println("-----------------------------------------------------");
         System.out.println(producto.getNombre()+"\t"+producto.getPrecioUnitario()+"$\t"+detalleVenta.getCantidad()+"\t\t"+detalleVenta.getImporte()+"$");
@@ -142,7 +150,7 @@ public class Venta {
         System.out.println("IVA: \t\t\t\t\t"+(impuesto*100)+"%");
         System.out.println("\t\t\t\t\t"+iva+"$");
         System.out.println("-----------------------------------------------------");
-        System.out.println("Total:\t\t\t\t "+total+"$");
+        System.out.println("Total:\t\t\t\t\t"+total+"$");
         
         
         
