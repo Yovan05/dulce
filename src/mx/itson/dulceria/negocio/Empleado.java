@@ -7,7 +7,7 @@ package mx.itson.dulceria.negocio;
  */
 public class Empleado extends Entidad{
     
-    private int idOperador=0;
+    private int idEmpleado=0;
     private String curp=new String();
     private double sueldo=0;
     private String horario=new String();
@@ -17,12 +17,12 @@ public class Empleado extends Entidad{
     public Empleado() {
     }
 
-    public int getIdOperador() {
-        return idOperador;
+    public int getIdEmpleado() {
+        return idEmpleado;
     }
 
-    public void setIdOperador(int idOperador) {
-        this.idOperador = idOperador;
+    public void setIdEmpleado(int idOperador) {
+        this.idEmpleado = idOperador;
     }
 
     public String getCurp() {
