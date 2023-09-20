@@ -9,8 +9,8 @@ public class Empresa extends Entidad{
   
     private int idEmpresa=0;
     private String registroPatronal=new String();
-    private String permisoMaterualPeligroso=new String();
-    private String paginaWeb=new String();
+    private String licenciaSanitaria=new String();
+    
 
     public Empresa() {
     }
@@ -31,13 +31,17 @@ public class Empresa extends Entidad{
         this.registroPatronal = registroPatronal;
     }
 
-    public String getPermisoMaterualPeligroso() {
-        return permisoMaterualPeligroso;
+    public String getLicenciaSanitaria() {
+        return licenciaSanitaria;
     }
 
-    public void setPermisoMaterualPeligroso(String permisoMaterualPeligroso) {
-        this.permisoMaterualPeligroso = permisoMaterualPeligroso;
+    public void setLicenciaSanitaria(String licenciaSanitaria) {
+        this.licenciaSanitaria = licenciaSanitaria;
     }
+
+    
+
+    
 
     
     
