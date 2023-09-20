@@ -14,11 +14,11 @@ public class Venta {
     private Cliente cliente= new Cliente();
     private Caja caja= new Caja();
     private Empleado empleado= new Empleado();
+    private Producto producto = new Producto();
     private DetalleVenta detalleVenta= new DetalleVenta();
     private String fechaHora= new String();
     private double subTotal=0;
     private double impuesto=0;
-    private double total=0;
 
     public Venta() {
     }
@@ -96,11 +96,44 @@ public class Venta {
     }
 
     public double getTotal() {
+        double total = subTotal*(1+impuesto);
         return total;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    
+    
+    public void ticket(){
+        System.out.println("\t\t"+empresa.getNombre());
+        System.out.println("");
+        System.out.println(empresa.getDomicilio());
+        System.out.println(empresa.getCorreoElectronico());
+        System.out.println(empresa.getPaginaWeb());
+        System.out.println(empresa.getRfc());
+        System.out.println("Fecha: "+fechaHora);
+        System.out.println("");
+        System.out.println("Articulo\tPrecio\tCantidad\tTotal");
+        System.out.println("-----------------------------------------------------");
+        System.out.println(producto.getNombre()+"\t"+producto.getPrecioUnitario()+"\t"+detalleVenta.getCantidad()+"\t\t"+detalleVenta.getImporte());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     
