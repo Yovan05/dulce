@@ -12,7 +12,6 @@ public class DetalleVenta {
     private int idDetalleVenta =0;
     private Producto producto = new Producto();
     private int cantidad=0;
-    private double importe=0;
     
 
     public DetalleVenta() {
@@ -43,12 +42,11 @@ public class DetalleVenta {
     }
 
     public double getImporte() {
+        double importe = cantidad*producto.getPrecioUnitario();
         return importe;
     }
 
-    public void setImporte(double importe) {
-        this.importe = importe;
-    }
+    
 
     
     
