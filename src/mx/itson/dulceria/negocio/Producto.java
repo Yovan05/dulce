@@ -12,7 +12,6 @@ public class Producto {
     
     private int idProducto=0;
     private String nombre=new String();
-    private String descripcion=new String();
     private String tipo=new String();
     private double precioUnitario=0;
     private double peso=0;
@@ -21,7 +20,7 @@ public class Producto {
     private int descuento=0;
     private String caducidad=new String();
     private String fabricante=new String();
-    private int lote=0;
+    private String lote=new String();
 
     public Producto() {
     }
@@ -40,14 +39,6 @@ public class Producto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
     }
 
     public String getTipo() {
@@ -114,11 +105,11 @@ public class Producto {
         this.fabricante = fabricante;
     }
 
-    public int getLote() {
+    public String getLote() {
         return lote;
     }
 
-    public void setLote(int lote) {
+    public void setLote(String lote) {
         this.lote = lote;
     }
     
