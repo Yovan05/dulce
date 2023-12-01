@@ -2,7 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package mx.itson.dulceria.negocio;
+package mx.itson.dulceria.ui;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import mx.itson.dulceria.entities.Caja;
+import mx.itson.dulceria.entities.Cliente;
+import mx.itson.dulceria.entities.DetalleVenta;
+import mx.itson.dulceria.entities.Empleado;
+import mx.itson.dulceria.entities.Empresa;
+import mx.itson.dulceria.entities.Producto;
+import mx.itson.dulceria.entities.Venta;
 
 /**
  *
@@ -13,7 +23,9 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         Empresa e1 = new Empresa();
         e1.setIdEmpresa(1);
@@ -26,7 +38,7 @@ public class Main {
         e1.setRfc("KDM140608EA8");
         e1.setTelefono("6221503446");
 
-        Empleado em1 = new Empleado();
+/*        Empleado em1 = new Empleado();
         em1.setIdEmpleado(1);
         em1.setCorreoElectronico("Gabrielito@gmail.com");
         em1.setCurp("MECG770826HSRNSB79");
@@ -38,7 +50,7 @@ public class Main {
         em1.setPuesto("Cajero");
         em1.setRfc("MECG770910VC1");
         em1.setSueldo(1900);
-        em1.setTelefono("6223468461");
+        em1.setTelefono("6223468461");*/
 
         Cliente c1 = new Cliente();
         c1.setIdClientes(1);
@@ -49,39 +61,31 @@ public class Main {
         c1.setTelefono("6225463126");
 
         Producto p1 = new Producto();
-        p1.setIdProducto(1);
         p1.setCaducidad("FEB/24 03:17");
         p1.setCalorias(472.7);
-        p1.setDescuento(0);
         p1.setFabricante("Mars");
         p1.setIngredientes("Chocolate con leche 35%(Azucares añadidos(Azucares), Manteca de cacao, Pasta de cacao, Leche descremada en polvo, Solidos de la leche, Grasa butirica, Lecitina de soya)"
                 + "Caramelo 27%(Azucares añadidos(Glucosa, Azucar), Leche descremada en polvo, Aceite vegetal, Solidos de la leche, Sal yodada, Saborizante artificial),"
                 + "Cacahuate 22%, Nougat 16%(Azucares añadidos(Azucar, Glucosa), Sal yodada, Albumina de huevo)");
-        p1.setLote("308E2MTML1");
         p1.setNombre("Snickers");
         p1.setPeso(48);
         p1.setPrecioUnitario(20);
-        p1.setTipo("Chocolate");
 
-        Caja ca1 = new Caja();
+/*        Caja ca1 = new Caja();
         ca1.setEmpleado(em1);
-        ca1.setIdCaja(1);
+        ca1.setIdCaja(1);*/
 
         DetalleVenta dV1 = new DetalleVenta();
-        dV1.setIdDetalleVenta(1);
         dV1.setCantidad(5);
         dV1.getImporte();
         dV1.setProducto(p1);
 
         Venta v1 = new Venta();
         v1.setIdVenta(1);
-        v1.setProducto(p1);
-        v1.setCaja(ca1);
         v1.setCliente(c1);
-        v1.setDetalleVenta(dV1);
-        v1.setEmpleado(em1);
+//        v1.setDetalleVenta(dV1);
         v1.setEmpresa(e1);
-        v1.setFechaHora("20/09/2023              17:05");
+        v1.setFechaHora(sdf.parse("2023-01-15"));
         v1.setImpuesto(0.16);
         v1.setSubTotal(dV1.getImporte());
         v1.getTotal();

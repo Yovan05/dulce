@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package mx.itson.dulceria.negocio;
+package mx.itson.dulceria.entities;
 
 /**
  *
@@ -10,28 +10,29 @@ package mx.itson.dulceria.negocio;
  */
 public class Producto {
     
-    private int idProducto=0;
     private String nombre=new String();
-    private String tipo=new String();
     private double precioUnitario=0;
     private double peso=0;
     private double calorias=0;
     private String ingredientes=new String();
-    private int descuento=0;
     private String caducidad=new String();
     private String fabricante=new String();
-    private String lote=new String();
+    private int stock=0;
 
     public Producto() {
     }
 
-    public int getIdProducto() {
-        return idProducto;
+    public Producto(String nombre, double precioUnitario, double peso, double calorias, String ingredientes, String caducidad, String fabricante,int stock){
+        this.nombre=nombre;
+        this.precioUnitario=precioUnitario;
+        this.peso=peso;
+        this.calorias=calorias;
+        this.ingredientes=ingredientes;
+        this.caducidad=caducidad;
+        this.fabricante=fabricante;
+        this.stock=stock;
     }
-
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
-    }
+    
 
     public String getNombre() {
         return nombre;
@@ -41,13 +42,6 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 
     public double getPrecioUnitario() {
         return precioUnitario;
@@ -81,13 +75,6 @@ public class Producto {
         this.ingredientes = ingredientes;
     }
 
-    public int getDescuento() {
-        return descuento;
-    }
-
-    public void setDescuento(int descuento) {
-        this.descuento = descuento;
-    }
 
     public String getCaducidad() {
         return caducidad;
@@ -105,12 +92,18 @@ public class Producto {
         this.fabricante = fabricante;
     }
 
-    public String getLote() {
-        return lote;
+    /**
+     * @return the stock
+     */
+    public int getStock() {
+        return stock;
     }
 
-    public void setLote(String lote) {
-        this.lote = lote;
+    /**
+     * @param stock the stock to set
+     */
+    public void setStock(int stock) {
+        this.stock = stock;
     }
     
     

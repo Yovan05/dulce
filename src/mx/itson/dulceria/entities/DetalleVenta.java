@@ -2,27 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package mx.itson.dulceria.negocio;
+package mx.itson.dulceria.entities;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author alexi
  */
 public class DetalleVenta {
-    private int idDetalleVenta =0;
+
     private Producto producto = new Producto();
     private int cantidad=0;
     
 
     public DetalleVenta() {
     }
-
-    public int getIdDetalleVenta() {
-        return idDetalleVenta;
-    }
-
-    public void setIdDetalleVenta(int idDetalleVenta) {
-        this.idDetalleVenta = idDetalleVenta;
+    
+    public DetalleVenta(Producto producto, int cantidad){
+        this.producto=producto;
+        this.cantidad=cantidad;
     }
 
     public Producto getProducto() {

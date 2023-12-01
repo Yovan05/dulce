@@ -1,5 +1,5 @@
 
-package mx.itson.dulceria.negocio;
+package mx.itson.dulceria.entities;
 
 /**
  *
